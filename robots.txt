@@ -25,4 +25,4 @@ User-agent: SemrushBot
 Disallow: /
 
 # Sitemap location
-Sitemap: https://adventuretourvernal.com/sitemap.xml
+Sitemap: https://adventuretoursvernal.com/sitemap.xml

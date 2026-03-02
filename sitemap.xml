@@ -1,73 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <!-- Homepage - Highest Priority -->
+
+  <!-- Homepage -->
   <url>
-    <loc>https://adventuretourvernal.com/</loc>
+    <loc>https://adventuretoursvernal.com/</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- Tours Section -->
-  <url>
-    <loc>https://adventuretourvernal.com/#tours</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
+
   <!-- Booking Page -->
   <url>
-    <loc>https://adventuretourvernal.com/booking.html</loc>
+    <loc>https://adventuretoursvernal.com/booking.html</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <!-- About Page -->
   <url>
-    <loc>https://adventuretourvernal.com/about.html</loc>
+    <loc>https://adventuretoursvernal.com/about.html</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  
+
   <!-- FAQ Page -->
   <url>
-    <loc>https://adventuretourvernal.com/faq.html</loc>
+    <loc>https://adventuretoursvernal.com/faq.html</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Policy Pages -->
+
+  <!-- Safety Guidelines -->
   <url>
-    <loc>https://adventuretourvernal.com/cancellation-policy.html</loc>
+    <loc>https://adventuretoursvernal.com/safety-guidelines.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Cancellation Policy -->
+  <url>
+    <loc>https://adventuretoursvernal.com/cancellation-policy.html</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
-  
+
+  <!-- What to Bring -->
   <url>
-    <loc>https://adventuretourvernal.com/privacy-policy.html</loc>
+    <loc>https://adventuretoursvernal.com/what-to-bring.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://adventuretoursvernal.com/privacy-policy.html</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://adventuretourvernal.com/safety-guidelines.html</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  
-  <url>
-    <loc>https://adventuretourvernal.com/what-to-bring.html</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
 </urlset>
