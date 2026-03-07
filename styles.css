@@ -4510,3 +4510,850 @@
     display: inline-block;
   }
 }
+
+/* Trail name badge — wider text than difficulty badge */
+.trail-badge {
+  font-size: 0.75rem;
+  padding: 7px 14px;
+  white-space: nowrap;
+}
+
+/* 5-trail grid — 2 columns desktop, 5th card centered */
+.trails-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.trails-grid .tour-card:last-child {
+  grid-column: 1 / -1;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .trails-grid {
+    grid-template-columns: 1fr;
+  }
+  .trails-grid .tour-card:last-child {
+    grid-column: auto;
+    max-width: none;
+  }
+}
+
+/* ================================================================
+   TRAIL PAGES — NEW STYLES
+   Append to bottom of styles.css
+   Reuses: .tour-book-btn, .policy-cta, .cta-buttons, .cta-button,
+           .status-badge, .about-feature, .mobile-sticky-cta,
+           all nav/footer classes
+   ================================================================ */
+
+/* ===== TRAIL HERO ===== */
+.trail-hero {
+  position: relative;
+  height: 70vh;
+  min-height: 500px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.trail-hero-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.05);
+  transition: transform 8s ease;
+}
+
+.trail-hero-bg.loaded { transform: scale(1); }
+
+.trail-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.75) 100%);
+}
+
+.trail-hero-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px 60px;
+}
+
+/* ===== TRAIL BREADCRUMB ===== */
+.trail-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+}
+
+.trail-breadcrumb a { color: rgba(255,255,255,0.8); text-decoration: none; transition: color 0.3s; }
+.trail-breadcrumb a:hover { color: var(--burnt-orange); }
+.trail-breadcrumb span { color: rgba(255,255,255,0.5); }
+.trail-breadcrumb .current { color: white; }
+
+/* ===== TRAIL HERO TEXT ===== */
+.trail-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  font-weight: 800;
+  color: white;
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+.trail-hero-meta {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.trail-hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.95);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* ===== TRAIL MAIN LAYOUT ===== */
+.trail-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 40px 80px;
+}
+
+.trail-intro {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 80px;
+}
+
+.trail-intro-text h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 25px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.trail-intro-text p {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: var(--charcoal);
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+/* ===== TRAIL SIDEBAR HIGHLIGHT BOX ===== */
+.trail-highlights-box {
+  background: linear-gradient(135deg, rgba(245,237,227,0.6), rgba(248,244,240,0.8));
+  border-radius: 20px;
+  padding: 35px;
+  border: 2px solid rgba(212,118,78,0.15);
+  position: sticky;
+  top: 90px;
+}
+
+.trail-highlights-box h3 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--burnt-orange);
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.highlight-list { list-style: none; margin-bottom: 30px; }
+
+.highlight-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(212,118,78,0.1);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--charcoal);
+}
+
+.highlight-list li:last-child { border-bottom: none; }
+.highlight-list li .hl-icon { font-size: 1.3rem; width: 28px; text-align: center; }
+
+/* Sidebar call button — book uses .tour-book-btn */
+.call-sidebar-btn {
+  display: block;
+  width: 100%;
+  background: white;
+  color: var(--burnt-orange);
+  padding: 14px;
+  border-radius: 12px;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--burnt-orange);
+  transition: var(--transition-smooth);
+  margin-top: 12px;
+}
+
+.call-sidebar-btn:hover { background: var(--burnt-orange); color: white; transform: translateY(-2px); }
+
+/* ===== SECTION DIVIDER ===== */
+.section-divider {
+  width: 80px;
+  height: 5px;
+  background: linear-gradient(90deg, var(--burnt-orange), var(--desert-gold));
+  border-radius: 3px;
+  margin-bottom: 40px;
+}
+
+/* ===== TIER CARDS ===== */
+.trail-tiers-section,
+.tiktok-section,
+.photo-gallery-section { margin-bottom: 80px; }
+
+.trail-tiers-section h2,
+.tiktok-section h2,
+.photo-gallery-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+.trail-tiers-section > p,
+.tiktok-section > p,
+.photo-gallery-section > p {
+  font-size: 1.05rem;
+  color: var(--charcoal);
+  opacity: 0.75;
+  margin-bottom: 40px;
+}
+
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.tier-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.tier-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(212,118,78,0.15);
+  border-color: rgba(212,118,78,0.2);
+}
+
+.tier-card-header { padding: 30px 30px 25px; }
+.tier-card-header.beginner { background: linear-gradient(135deg, #27AE60, #229954); }
+.tier-card-header.advanced { background: linear-gradient(135deg, #F39C12, #D68910); }
+.tier-card-header.expert   { background: linear-gradient(135deg, var(--burnt-orange), var(--canyon-red)); }
+
+.tier-level-label {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 6px;
+}
+
+.tier-name {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.tier-card-body { padding: 25px 30px 30px; }
+
+.tier-description {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--charcoal);
+  opacity: 0.85;
+  margin-bottom: 20px;
+}
+
+.tier-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.tier-tag {
+  background: rgba(212,118,78,0.08);
+  border: 1px solid rgba(212,118,78,0.15);
+  color: var(--burnt-orange);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+/* ===== TIKTOK GRID ===== */
+.tiktok-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+  gap: 30px;
+  align-items: start;
+}
+
+.tiktok-embed-wrapper {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(0,0,0,0.06);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.tiktok-embed-wrapper iframe {
+  width: 325px;
+  height: 580px;
+  border: none;
+  display: block;
+}
+
+/* ===== PHOTO GRID ===== */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.photo-grid-item {
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+}
+
+.photo-grid-item.featured { grid-column: span 2; aspect-ratio: 16/9; }
+
+.photo-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.photo-grid-item:hover img { transform: scale(1.05); }
+
+/* ===== TRAIL CTA — reuses .policy-cta layout, adds watermark ===== */
+.trail-cta {
+  position: relative;
+  overflow: hidden;
+}
+
+.trail-cta-watermark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-heading);
+  font-size: 10rem;
+  font-weight: 900;
+  color: rgba(255,255,255,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 10px;
+  z-index: 0;
+}
+
+.trail-cta > * { position: relative; z-index: 1; }
+
+/* ===== OTHER TRAILS ===== */
+.other-trails-section { margin-top: 80px; }
+
+.other-trails-section h2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--charcoal);
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+.other-trails-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.other-trail-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  border: 2px solid transparent;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  display: block;
+}
+
+.other-trail-card:hover {
+  border-color: rgba(212,118,78,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(212,118,78,0.15);
+}
+
+.other-trail-img {
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+}
+
+.other-trail-info { padding: 16px 18px; }
+
+.other-trail-info h3 {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.other-trail-info span {
+  font-size: 0.82rem;
+  color: var(--burnt-orange);
+  font-weight: 600;
+}
+
+/* ===== TRAIL PAGE RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .trail-intro { grid-template-columns: 1fr; }
+  .trail-highlights-box { position: static; }
+  .tiers-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .trail-main { padding: 40px 20px 60px; }
+  .trail-hero-content { padding: 0 20px 40px; }
+  .trail-hero-title { font-size: 2.5rem; letter-spacing: -1px; }
+  .trail-hero-meta { gap: 15px; }
+  .photo-grid { grid-template-columns: repeat(2, 1fr); }
+  .photo-grid-item.featured { grid-column: span 2; }
+  .tiktok-grid { grid-template-columns: 1fr; align-items: center; }
+  .trail-cta-watermark { font-size: 4rem; }
+}
+
+@media (max-width: 480px) {
+  .trail-hero { height: 60vh; min-height: 420px; }
+  .photo-grid { grid-template-columns: 1fr; }
+  .photo-grid-item.featured { grid-column: span 1; }
+}
+
+/* ===== TIKTOK PORTRAIT FRAME =====
+   Self-contained — replicates the original video-frame-3d look
+   but built from scratch for portrait (9:16) videos in a grid.
+*/
+
+/* ===== TIKTOK CAROUSEL ===== */
+.tiktok-carousel {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.tiktok-carousel-track-wrap {
+  flex: 1;
+  overflow: hidden;
+  /* perspective so the 3D frame tilt still looks good */
+  perspective: 1500px;
+}
+
+.tiktok-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tiktok-carousel-slide {
+  min-width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 60px 40px;
+  box-sizing: border-box;
+}
+
+/* Arrow buttons */
+.tiktok-carousel-btn {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, var(--burnt-orange), var(--rust-red));
+  color: white;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 20px rgba(212, 118, 78, 0.35);
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.tiktok-carousel-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(212, 118, 78, 0.5);
+}
+
+/* Dot indicators */
+.tiktok-carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.tiktok-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(212, 118, 78, 0.25);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.tiktok-dot.active {
+  background: var(--burnt-orange);
+  width: 28px;
+  border-radius: 5px;
+}
+
+.tiktok-dot:hover {
+  background: rgba(212, 118, 78, 0.6);
+}
+
+@media (max-width: 768px) {
+  .tiktok-carousel {
+    gap: 10px;
+  }
+
+  .tiktok-carousel-slide {
+    padding: 15px 10px 30px;
+  }
+
+  .tiktok-carousel-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
+  }
+}
+
+/* The wood-grain 3D frame — matches original video-frame-3d exactly */
+.tiktok-portrait-frame {
+  position: relative;
+  width: 100%;
+  max-width: 340px;
+  padding: 10px;
+  background: linear-gradient(135deg, #D4A574 0%, #C19A6B 25%, #B8956A 50%, #A8865F 75%, #8B7355 100%);
+  border-radius: 20px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    inset 0 2px 10px rgba(255, 255, 255, 0.3),
+    inset 0 -10px 30px rgba(0, 0, 0, 0.3);
+  transform: rotateX(5deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 3px solid #8B7355;
+}
+
+.tiktok-portrait-frame:hover {
+  transform: rotateX(0deg) scale(1.02);
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.5),
+    inset 0 2px 10px rgba(255, 255, 255, 0.3),
+    inset 0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Glow behind the frame */
+.tiktok-portrait-frame::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, rgba(139,115,85,0.4) 0%, transparent 50%, rgba(184,149,106,0.4) 100%);
+  border-radius: 25px;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+/* The black screen — fixed aspect ratio 9:16 */
+.tiktok-portrait-screen {
+  position: relative;
+  width: 100%;
+  padding-bottom: 177.78%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.tiktok-portrait-screen iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+/* ================================================================
+   PROMO VIDEO — 3D FRAME
+   Append to bottom of styles.css
+   Matches .video-frame-3d / .tiktok-portrait-frame style
+================================================================ */
+
+.promo-video-section {
+  max-width: 900px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.promo-video-section h2 {
+  margin-bottom: 10px;
+}
+
+.promo-video-section > p {
+  margin-bottom: 32px;
+  color: #666;
+}
+
+/* Perspective wrapper */
+.promo-video-3d-wrap {
+  perspective: 1500px;
+}
+
+/* 3D wood-grain frame — mirrors .video-frame-3d */
+.promo-video-frame {
+  position: relative;
+  padding: 28px;
+  background:
+    linear-gradient(135deg, #D4A574 0%, #C19A6B 25%, #B8956A 50%, #A8865F 75%, #8B7355 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence baseFrequency="0.9" numOctaves="4" type="fractalNoise"/></filter><rect width="200" height="200" filter="url(%23noise)" opacity="0.15"/></svg>');
+  background-blend-mode: overlay;
+  border-radius: 20px;
+  border: 3px solid #8B7355;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.4),
+    inset 0 2px 10px rgba(255, 255, 255, 0.3),
+    inset 0 -10px 30px rgba(0, 0, 0, 0.3);
+  transform: rotateX(5deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.promo-video-frame:hover {
+  transform: rotateX(0deg) scale(1.02);
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.5),
+    inset 0 2px 10px rgba(255, 255, 255, 0.3),
+    inset 0 -10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Ambient glow behind frame */
+.promo-video-frame::after {
+  content: '';
+  position: absolute;
+  top: -10px; left: -10px; right: -10px; bottom: -10px;
+  background: linear-gradient(135deg, rgba(139,115,85,0.4) 0%, transparent 50%, rgba(184,149,106,0.4) 100%);
+  border-radius: 25px;
+  z-index: -1;
+  filter: blur(15px);
+}
+
+/* Inner screen — 16:9 */
+.promo-video-screen {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    inset 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.promo-video-screen iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .promo-video-frame {
+    padding: 18px;
+    transform: rotateX(3deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-video-frame {
+    padding: 12px;
+    transform: rotateX(2deg);
+  }
+}
+
+
+/* ================================================================
+   TRAIL VIDEO CARDS — 3D FRAME
+   Each card gets the same wood-grain frame treatment
+================================================================ */
+
+.trail-videos-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.trail-videos-section h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.trail-videos-section > p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 36px;
+}
+
+.trail-video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 36px;
+}
+
+/* Card shell */
+.trail-video-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  /* perspective on the card so the frame tilt reads correctly */
+  perspective: 1200px;
+}
+
+/* 3D wood-grain frame — same as promo, same as .video-frame-3d */
+.trail-video-frame {
+  position: relative;
+  padding: 18px;
+  background:
+    linear-gradient(135deg, #D4A574 0%, #C19A6B 25%, #B8956A 50%, #A8865F 75%, #8B7355 100%),
+    url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><filter id="noise"><feTurbulence baseFrequency="0.9" numOctaves="4" type="fractalNoise"/></filter><rect width="200" height="200" filter="url(%23noise)" opacity="0.15"/></svg>');
+  background-blend-mode: overlay;
+  border-radius: 16px;
+  border: 3px solid #8B7355;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35),
+    inset 0 2px 8px rgba(255, 255, 255, 0.3),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.3);
+  transform: rotateX(5deg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trail-video-card:hover .trail-video-frame {
+  transform: rotateX(0deg) scale(1.03);
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.45),
+    inset 0 2px 8px rgba(255, 255, 255, 0.3),
+    inset 0 -8px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* Ambient glow */
+.trail-video-frame::after {
+  content: '';
+  position: absolute;
+  top: -8px; left: -8px; right: -8px; bottom: -8px;
+  background: linear-gradient(135deg, rgba(139,115,85,0.35) 0%, transparent 50%, rgba(184,149,106,0.35) 100%);
+  border-radius: 22px;
+  z-index: -1;
+  filter: blur(12px);
+}
+
+/* Inner screen — 16:9 */
+.trail-video-screen {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.55),
+    inset 0 0 16px rgba(0, 0, 0, 0.4);
+}
+
+.trail-video-screen iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Trail name label below the frame */
+.trail-video-label {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  padding: 4px 0 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .trail-video-frame {
+    padding: 14px;
+    transform: rotateX(3deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .trail-video-frame {
+    padding: 10px;
+    transform: rotateX(2deg);
+  }
+}
