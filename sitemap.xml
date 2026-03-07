@@ -65,4 +65,12 @@
     <priority>0.5</priority>
   </url>
 
+  <!-- trails -->
+  <url>
+    <loc>https://adventuretoursvernal.com/trails.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
 </urlset>
