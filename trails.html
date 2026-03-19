@@ -75,7 +75,14 @@
 
   <!-- HERO -->
   <div class="trail-hero">
-    <div class="trail-hero-bg" id="trailHeroBg" style="background-image:url('images/48a.webp');"></div>
+    <div class="trail-hero-video-bg">
+  <iframe
+    src="https://www.youtube.com/embed/zVhDfvb3W3U?autoplay=1&mute=1&loop=1&playlist=zVhDfvb3W3U&controls=0&showinfo=0&rel=0&playsinline=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
     <div class="trail-hero-overlay"></div>
     <div class="trail-hero-content">
       <nav class="trail-breadcrumb" aria-label="Breadcrumb">
@@ -430,9 +437,8 @@
 
     <!-- PHOTO GALLERY -->
     <div class="photo-gallery-section">
-      <h2>Photo Gallery</h2>
-      <p>A glimpse of the terrain, scenery, and adventure waiting for you on the trails.</p>
-      <div class="photo-grid">
+      <h2>A glimpse of the terrain, scenery, and adventure waiting for you on the trails.</h2>
+        <div class="photo-grid">
         <div class="photo-grid-item featured">
           <img src="images/48a.webp" alt="Doc's Beach guided UTV tour — Adventure Tours Vernal">
         </div>
@@ -444,7 +450,16 @@
     </div>
 
     <!-- CTA -->
-    <div class="policy-cta trail-cta">
+    <div class="policy-cta trail-cta" style="position:relative; overflow:hidden;">
+  <div class="cta-video-bg">
+    <iframe
+      src="https://www.youtube.com/embed/U4RogvmCLFU?autoplay=1&mute=1&loop=1&playlist=U4RogvmCLFU&controls=0&showinfo=0&rel=0&playsinline=1"
+      frameborder="0"
+      allow="autoplay; encrypted-media"
+      allowfullscreen>
+    </iframe>
+  </div>
+  <div class="cta-video-overlay"></div>
       <span class="trail-cta-watermark">ADVENTURE AWAITS</span>
       <h3>Ready to Hit the Trails?</h3>
       <p>Five legendary destinations. Book your guided tour today and let Dave Wilson show you what Vernal's backcountry is all about.</p>
@@ -542,11 +557,7 @@
   </div>
 
   <script>
-    window.addEventListener('load', function() {
-      document.getElementById('trailHeroBg').classList.add('loaded');
-    });
-
-    window.addEventListener('scroll', function() {
+     window.addEventListener('scroll', function() {
       var navbar = document.querySelector('.navbar');
       navbar.style.boxShadow = window.pageYOffset > 50
         ? '0 6px 40px rgba(0,0,0,0.12), 0 2px 10px rgba(212,118,78,0.08)'

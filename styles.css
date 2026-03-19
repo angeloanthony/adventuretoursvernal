@@ -6945,3 +6945,64 @@
   .crowd-col { padding: 28px 22px; }
   .savings-callout::before { font-size: 6rem; }
 }
+
+/* ── TRAIL HERO VIDEO BACKGROUND ── */
+.trail-hero-video-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.trail-hero-video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;   /* fills wide screens */
+  height: 56.25vw;   /* fills tall screens */
+  min-width: 100%;
+  min-height: 100%;
+  pointer-events: none; /* keeps clicks going to the hero content */
+  border: none;
+}
+
+/* ── CTA VIDEO BACKGROUND ── */
+.cta-video-bg {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.cta-video-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 177.78vh;
+  height: 56.25vw;
+  min-width: 100%;
+  min-height: 100%;
+  pointer-events: none;
+  border: none;
+}
+
+.cta-video-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.20);
+  z-index: 1;
+}
+
+/* Ensure CTA text sits above video */
+.trail-cta .trail-cta-watermark,
+.trail-cta h3,
+.trail-cta p,
+.trail-cta .cta-buttons {
+  position: relative;
+  z-index: 2;
+}
