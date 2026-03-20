@@ -53,13 +53,8 @@
         📅 Live Calendar &bull; Instant Booking &bull; See Available Times
       </div>
 
-      <!-- TOP BOOK BUTTON -->
-      <div style="text-align:center; margin-top:30px;">
-        <p style="font-size:1.05rem; color:#666; margin-bottom:16px; font-family:var(--font-body);">You'll choose your trail during booking.</p>
-        <a href="https://cal.com/adventuretoursvernal/trails" target="_blank" class="btn btn-primary">
-          📅 Book Your Adventure
-        </a>
-      </div>
+      <!-- CAL.COM INLINE EMBED -->
+<div id="cal-booking-inline" style="width:100%; min-height:700px; margin-top:30px; border-radius:12px; overflow:hidden;"></div>
     </div>
 
     <!-- Trails Section -->
@@ -178,13 +173,9 @@
 
       </div>
 
-      <!-- BOTTOM BOOK BUTTON -->
-      <div style="text-align:center; margin-top:50px; padding:20px 0;">
-        <p style="font-size:1.05rem; color:#666; margin-bottom:16px; font-family:var(--font-body);">Ready to ride? You'll choose your trail during booking.</p>
-        <a href="https://cal.com/adventuretoursvernal/trails" target="_blank" class="btn btn-primary">
-          📅 Book Your Adventure
-        </a>
-      </div>
+    <div style="text-align:center; margin-top:50px; padding:20px 0;">
+      <p style="font-size:1.05rem; color:#666; font-family:var(--font-body);">Use the calendar above to pick your date and trail.</p>
+    </div>
 
     </section>
 
@@ -304,6 +295,53 @@
       }
     });
   </script>
+
+  <!-- Cal.com Inline Embed Script -->
+<script type="text/javascript">
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal; let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {}; cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, [L, namespace, ar[2]]);
+        } else p(cal, ar);
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", { origin: "https://cal.com" });
+
+  Cal("inline", {
+  elementOrSelector: "#cal-booking-inline",
+  calLink: "adventuretoursvernal/trails",
+  layout: "month_view",
+  config: { 
+    duration: 180,
+    overlayCalendar: true
+  }
+});
+
+  Cal("ui", {
+    theme: "light",
+    styles: { branding: { brandColor: "#d4764e" } },
+    hideEventTypeDetails: false,
+    layout: "month_view"
+  });
+</script>
 
 </body>
 </html>
