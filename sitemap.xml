@@ -4,7 +4,7 @@
   <!-- Homepage -->
   <url>
     <loc>https://adventuretoursvernal.com/</loc>
-    <lastmod>2026-02-15</lastmod>
+    <lastmod>2026-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -20,6 +20,14 @@
   <!-- About Page -->
   <url>
     <loc>https://adventuretoursvernal.com/about.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Trails Page -->
+  <url>
+    <loc>https://adventuretoursvernal.com/trails.html</loc>
     <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -57,6 +65,30 @@
     <priority>0.6</priority>
   </url>
 
+  <!-- Limo Service -->
+  <url>
+    <loc>https://adventuretoursvernal.com/limo.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Moab Alternative -->
+  <url>
+    <loc>https://adventuretoursvernal.com/moab-alternative.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Moab UTV Tours -->
+  <url>
+    <loc>https://adventuretoursvernal.com/moab-utv-tours.html</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
   <!-- Privacy Policy -->
   <url>
     <loc>https://adventuretoursvernal.com/privacy-policy.html</loc>
@@ -65,12 +97,38 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- trails -->
+  <!-- ===== NEW: Topical Authority Supporting Articles ===== -->
+
+  <!-- Best UTV Trails Near Vernal -->
   <url>
-    <loc>https://adventuretoursvernal.com/trails.html</loc>
-    <lastmod>2026-02-15</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://adventuretoursvernal.com/best-utv-trails-vernal.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Petroglyphs and Rock Art Sites Near Vernal -->
+  <url>
+    <loc>https://adventuretoursvernal.com/petroglyphs-rock-art-vernal.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- What to Wear on a Desert UTV Tour -->
+  <url>
+    <loc>https://adventuretoursvernal.com/what-to-wear-utv-tour.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Vernal Weather Guide for Outdoor Activities -->
+  <url>
+    <loc>https://adventuretoursvernal.com/vernal-weather-guide.html</loc>
+    <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>
