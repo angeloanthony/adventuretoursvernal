@@ -1152,3 +1152,35 @@
   .article-page { margin-top: 120px; }
   .article-body { padding: 24px 18px; }
 }
+
+/* ================================================================
+   RESTAURANT CARD IMAGE FIX — add to styles.css
+   Ensures full restaurant photos are visible (no cropping)
+   ================================================================ */
+
+/* Desktop card image — contain so full photo shows */
+.card-image {
+  height: 240px !important;
+  background-color: #F5EDE3 !important;      /* warm site background as letterbox */
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+}
+
+/* Tablet override */
+@media (max-width: 768px) {
+  .card-image {
+    height: 200px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+}
+
+/* Mobile override */
+@media (max-width: 480px) {
+  .card-image {
+    height: 180px !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+}
