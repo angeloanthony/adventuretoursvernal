@@ -97,9 +97,8 @@
     <priority>0.5</priority>
   </url>
 
-  <!-- ===== NEW: Topical Authority Supporting Articles ===== -->
+  <!-- ===== Tier 1 Supporting Articles (March 2026) ===== -->
 
-  <!-- Best UTV Trails Near Vernal -->
   <url>
     <loc>https://adventuretoursvernal.com/best-utv-trails-vernal.html</loc>
     <lastmod>2026-03-27</lastmod>
@@ -107,7 +106,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Petroglyphs and Rock Art Sites Near Vernal -->
   <url>
     <loc>https://adventuretoursvernal.com/petroglyphs-rock-art-vernal.html</loc>
     <lastmod>2026-03-27</lastmod>
@@ -115,7 +113,6 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- What to Wear on a Desert UTV Tour -->
   <url>
     <loc>https://adventuretoursvernal.com/what-to-wear-utv-tour.html</loc>
     <lastmod>2026-03-27</lastmod>
@@ -123,7 +120,6 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Vernal Weather Guide for Outdoor Activities -->
   <url>
     <loc>https://adventuretoursvernal.com/vernal-weather-guide.html</loc>
     <lastmod>2026-03-27</lastmod>
@@ -131,10 +127,91 @@
     <priority>0.6</priority>
   </url>
 
-  <!-- Best Restaurants in Vernal Utah -->
   <url>
     <loc>https://adventuretoursvernal.com/best-restaurants-vernal-utah.html</loc>
     <lastmod>2026-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ===== Tier 2 SEO Pages — Search-Driven (April 2026) ===== -->
+
+  <!-- Things to Do in Vernal (top GBP query — 48 impressions) -->
+  <url>
+    <loc>https://adventuretoursvernal.com/things-to-do-vernal-utah.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Fun Things to Do with Kids -->
+  <url>
+    <loc>https://adventuretoursvernal.com/fun-things-to-do-vernal-utah-kids.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ATV Trails Near Vernal -->
+  <url>
+    <loc>https://adventuretoursvernal.com/atv-trails-vernal-utah.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Side-by-Side Rentals (captures rental intent) -->
+  <url>
+    <loc>https://adventuretoursvernal.com/side-by-side-rentals-vernal-utah.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Vernal Attractions (2nd highest GBP query — 25 impressions) -->
+  <url>
+    <loc>https://adventuretoursvernal.com/vernal-utah-attractions.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Jeep Trails Near Vernal -->
+  <url>
+    <loc>https://adventuretoursvernal.com/jeep-trails-vernal-utah.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- UTV Tours Near Dinosaur National Monument -->
+  <url>
+    <loc>https://adventuretoursvernal.com/dinosaur-national-monument-tours.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Backcountry Tours -->
+  <url>
+    <loc>https://adventuretoursvernal.com/backcountry-tours-vernal-utah.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Group UTV Tours -->
+  <url>
+    <loc>https://adventuretoursvernal.com/group-utv-tours-vernal.html</loc>
+    <lastmod>2026-04-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Outdoor Activities in Vernal -->
+  <url>
+    <loc>https://adventuretoursvernal.com/outdoor-activities-vernal-utah.html</loc>
+    <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
