@@ -172,7 +172,14 @@
 
   <!-- Hero Section -->
   <div class="hero">
-    <div class="hero-background"></div>
+    <div class="trail-hero-video-bg">
+  <iframe
+    src="https://www.youtube.com/embed/BHOABkrNnnE?autoplay=1&mute=1&loop=1&playlist=BHOABkrNnnE&controls=0&showinfo=0&rel=0&playsinline=1"
+    frameborder="0"
+    allow="autoplay; encrypted-media"
+    allowfullscreen>
+  </iframe>
+</div>
     <div class="hero-overlay"></div>
 
     <div class="hero-video-wrapper">
@@ -683,15 +690,6 @@
       element.style.backgroundImage = `url('${element.getAttribute('data-bg')}')`;
       element.style.backgroundSize = 'cover';
       element.style.backgroundPosition = 'center';
-    });
-
-    // Parallax
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const heroBackground = document.querySelector('.hero-background');
-      if (heroBackground && scrolled < window.innerHeight) {
-        heroBackground.style.transform = `translateY(${scrolled * 0.5}px)`;
-      }
     });
 
     // Scroll indicator fade
